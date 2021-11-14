@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SunSetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7T-wf-xWv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Home" id="Di9-m2-dO8"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e3A-P8-hKf">
+                                <rect key="frame" x="20" y="115" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUU-GI-YvI">
+                                <rect key="frame" x="20" y="192" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Get Sunset"/>
+                                <connections>
+                                    <action selector="onPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SlD-Sd-6Jk"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="H3b-j6-YeZ">
+                                <rect key="frame" x="20" y="231" width="374" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="RhD-YJ-X85"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2M-ky-2l4">
+                                <rect key="frame" x="20" y="321" width="374" height="32.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="w7T-wf-xWv" firstAttribute="centerX" secondItem="e3A-P8-hKf" secondAttribute="centerX" id="0In-l3-HZF"/>
+                            <constraint firstItem="e3A-P8-hKf" firstAttribute="leading" secondItem="kUU-GI-YvI" secondAttribute="leading" id="0gC-3x-VnZ"/>
+                            <constraint firstItem="H3b-j6-YeZ" firstAttribute="leading" secondItem="H2M-ky-2l4" secondAttribute="leading" id="1cq-XL-LPd"/>
+                            <constraint firstItem="kUU-GI-YvI" firstAttribute="top" secondItem="e3A-P8-hKf" secondAttribute="bottom" constant="43" id="9XZ-n2-5T6"/>
+                            <constraint firstItem="w7T-wf-xWv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AdW-SQ-udn"/>
+                            <constraint firstItem="e3A-P8-hKf" firstAttribute="top" secondItem="w7T-wf-xWv" secondAttribute="bottom" constant="71" id="JLV-zR-yJj"/>
+                            <constraint firstItem="kUU-GI-YvI" firstAttribute="trailing" secondItem="H3b-j6-YeZ" secondAttribute="trailing" id="Ovy-EK-73n"/>
+                            <constraint firstItem="H3b-j6-YeZ" firstAttribute="trailing" secondItem="H2M-ky-2l4" secondAttribute="trailing" id="ZIP-Sg-6R9"/>
+                            <constraint firstItem="H2M-ky-2l4" firstAttribute="top" secondItem="H3b-j6-YeZ" secondAttribute="bottom" constant="47" id="cSj-uX-mJF"/>
+                            <constraint firstItem="H3b-j6-YeZ" firstAttribute="top" secondItem="kUU-GI-YvI" secondAttribute="bottom" constant="8" id="eVx-cb-LOL"/>
+                            <constraint firstItem="e3A-P8-hKf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eyw-5B-ono"/>
+                            <constraint firstItem="kUU-GI-YvI" firstAttribute="leading" secondItem="H3b-j6-YeZ" secondAttribute="leading" id="fxd-9q-DYV"/>
+                            <constraint firstItem="w7T-wf-xWv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lih-f5-SmG"/>
+                            <constraint firstItem="e3A-P8-hKf" firstAttribute="trailing" secondItem="kUU-GI-YvI" secondAttribute="trailing" id="ucl-fV-sFt"/>
+                            <constraint firstItem="e3A-P8-hKf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zne-I8-Zxv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="kUU-GI-YvI" id="suD-MM-DqB"/>
+                        <outlet property="loadingIndicator" destination="H3b-j6-YeZ" id="EQ7-Mg-rrT"/>
+                        <outlet property="resultLabel" destination="H2M-ky-2l4" id="L4W-np-kf0"/>
+                        <outlet property="textField" destination="e3A-P8-hKf" id="hLK-Zt-xe5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="69.293478260869577"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
